@@ -5,12 +5,14 @@ const responseSchema = new mongoose.Schema(
     requestId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Request',
-      required: [true, 'Request ID is required']
+      required: [true, 'Request ID is required'],
+      index: true
     },
     userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
-      required: [true, 'User ID is required']
+      required: [true, 'User ID is required'],
+      index: true
     },
     message: {
       type: String,
